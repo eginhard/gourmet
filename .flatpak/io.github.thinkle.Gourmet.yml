@@ -16,16 +16,6 @@ modules:
         url: https://www.python.org/ftp/python/3.8.4/Python-3.8.4.tar.xz
         sha256: 5f41968a95afe9bc12192d7e6861aab31e80a46c46fa59d3d837def6a4cd4d37
 
-  - name: pygobject
-    buildsystem: simple
-    build-commands:
-        - pip3 install --prefix=/app --no-deps PyGObject
-    sources:
-        - type: archive
-        - url: https://files.pythonhosted.org/packages/3a/a7/de282a4aaedba59d60a895a7821e6497b39cbdfa94a352776ff45ffc6e6f/PyGObject-3.38.0.tar.gz
-        - sha256: 051b950f509f2e9f125add96c1493bde987c527f7a0c15a1f7b69d6d1c3cd8e6
-
-
   - name: poppler
     buildsystem: cmake-ninja
     config-opts:
