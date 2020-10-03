@@ -22,7 +22,7 @@ modules:
       - "-DCMAKE_INSTALL_LIBDIR=/app/lib"
       - "-DCMAKE_INSTALL_INCLUDEDIR=/app/include"
       - "-DENABLE_LIBOPENJPEG=none"
-      - "-DENABLE_GOBJECT_INTROSPECTION=OFF"
+      - "-DENABLE_UTILS=OFF"
     cleanup:
       - "/bin"
     sources:
