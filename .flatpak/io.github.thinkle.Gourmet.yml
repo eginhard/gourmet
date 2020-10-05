@@ -29,13 +29,13 @@ modules:
       build-args:
         - --share=network
     build-commands:
+      - pip install pygobject  # For poppler, below
       - pip3 install pyenchant pygobject
       - pip3 install -r requirements.txt
       - python3 setup.py build_i18n
       - python3 setup.py install --prefix=/app
       - install -Dm644 .flatpak/io.github.thinkle.Gourmet.desktop -t /app/share/applications/
       - install -Dm644 .flatpak/io.github.thinkle.Gourmet.svg -t /app/share/icons/hicolor/scalable/apps/
-
     sources:
       - type: git
         url:  https://github.com/kirienko/gourmet
@@ -46,7 +46,7 @@ modules:
       - "-DCMAKE_INSTALL_LIBDIR=/app/lib"
       - "-DCMAKE_INSTALL_INCLUDEDIR=/app/include"
       - "-DENABLE_LIBOPENJPEG=none"
-      - "-DENABLE_UTILS=OFF"
+      - "-DENABLE_TESTING=OFF"
     cleanup:
       - "/bin"
     sources:
