@@ -50,7 +50,8 @@ modules:
       build-args:
         - --share=network
     build-commands:
-      - pip3 install pyenchant pygobject
+      - python3 -m pip install --upgrade pip
+      - pip3 install pyenchant pygobject Sphinx
       - pip3 install -r requirements.txt
       - python3 setup.py build_i18n
       - python3 setup.py install --prefix=/app
