@@ -50,7 +50,6 @@ modules:
       build-args:
         - --share=network
     build-commands:
-      - pip install pygobject  # For poppler, below
       - pip3 install pyenchant pygobject
       - pip3 install -r requirements.txt
       - python3 setup.py build_i18n
